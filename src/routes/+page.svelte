@@ -19,6 +19,10 @@
   import Frontend from "../asset/gifs/frontend.png";
   import Backend from "../asset/gifs/backend.png";
   import Database from "../asset/gifs/database.png";
+  import Gsap from "../asset/logos/gsap.svg";
+
+  import Onship from "../asset/images/onship.png";
+  import MusicExplore from "../asset/images/music-explore.png";
 
   let logos = [
     Html,
@@ -76,7 +80,7 @@
       <img src={Logo} alt="computer guy" class="header-img-logo" />
     </div>
   </section>
-  <section class="about">
+  <section class="about" id="Aboutme">
     <h1 class="about-header t-center">About Me</h1>
 
     <p class="about-content">
@@ -128,6 +132,53 @@
           Create a performance, integrited , and well secured database. Store
           and organize data effectively
         </p>
+      </div>
+    </div>
+  </section>
+  <section class="projects" id="Showcase">
+    <h2 class="header-small t-center">Recent Projects</h2>
+    <div class="projects-card-container">
+      <div class="projects-card">
+        <img src={Onship} alt="onship project" />
+        <div class="card-content-container">
+          <h3 class="card-title">Ship On</h3>
+          <p class="card-content">
+            In publishing and graphic design, Lorem ipsum is a placeholder text
+            commonly used to demonstrate the visual form of a document or a
+            typeface without relying on meaningful content. Lorem ipsum may be
+            used as a placeholder before the final copy is available.
+          </p>
+          <div class="card-skills">
+            <img src={React} alt="" />
+            <img src={Gsap} alt="" />
+          </div>
+          <div class="card-btns">
+            <a href="#" class="card-btn"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="blue">Link</a>
+          </div>
+        </div>
+      </div>
+      <div class="projects-card">
+        <img src={MusicExplore} alt="onship project" />
+        <div class="card-content-container">
+          <h3 class="card-title">Music Explore</h3>
+          <p class="card-content">
+            In publishing and graphic design, Lorem ipsum is a placeholder text
+            commonly used to demonstrate the visual form of a document or a
+            typeface without relying on meaningful content. Lorem ipsum may be
+            used as a placeholder before the final copy is available.
+          </p>
+          <div class="card-skills">
+            <img src={React} alt="" />
+            <img src={Express} alt="" />
+            <img src={Mongodb} alt="" />
+            <img src={Redux} alt="" />
+          </div>
+          <div class="card-btns">
+            <a href="#" class="card-btn"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="blue">Link</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

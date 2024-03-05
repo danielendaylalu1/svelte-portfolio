@@ -78,10 +78,9 @@
   font-size: 1.2rem;
 }
 .header-img-logo {
-  border-radius: 50%;
-
-  max-width: 300px;
-  height: 300px;
+  border-radius: 100%;
+  max-width: 200px;
+  height: 250px;
 }
 .about {
   padding: 4rem 2rem;
@@ -106,7 +105,7 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
 }
 .skills-logo-container {
   display: flex;
@@ -128,7 +127,7 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
 }
 .services-card-container {
   display: flex;
@@ -150,4 +149,47 @@
 .services-card img {
   width: 80px;
   height: 80px;
+}
+.projects {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.projects-card-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.projects-card {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #1b1b1b;
+  border-radius: 15px;
+  overflow: hidden !important;
+}
+.card-content-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.card-btns {
+  display: flex;
+  gap: 2rem;
+}
+.card-skills {
+  display: flex;
+  gap: 1rem;
+}
+.card-skills img {
+  width: 25px;
+}
+
+.projects-card img {
+  /* display: flex; */
+  max-width: 100%;
+  display: block;
 }
