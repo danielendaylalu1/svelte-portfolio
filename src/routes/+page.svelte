@@ -1,29 +1,44 @@
 <script lang="ts">
+  // import { LOOP } from "@splidejs/splide";
   import Logo from "../asset/profile.png";
-  const navLinks: string[] = ["Home", "Aboutme", "Showcase"];
+  import Navbar from "../components/Navbar.svelte";
+  import "../style/index.css";
+  import Express from "../asset/logos/express.svg";
+  import React from "../asset/logos/react.svg";
+  import Nodejs from "../asset/logos/node-js.svg";
+  import Css from "../asset/logos/css.svg";
+  import Html from "../asset/logos/html.svg";
+  import Mongodb from "../asset/logos/mongodb.svg";
+  import Bootstrap from "../asset/logos/bootstrap.svg";
+  import Redux from "../asset/logos/redux.svg";
+  import Javascript from "../asset/logos/javascript.svg";
+  import Tailwind from "../asset/logos/tailwind-css.svg";
+  import Sql from "../asset/logos/sql.svg";
+  import Nextjs from "../asset/logos/nextjs.png";
+  import Svelte from "../asset/logos/svelte.png";
+  import Frontend from "../asset/gifs/frontend.png";
+  import Backend from "../asset/gifs/backend.png";
+  import Database from "../asset/gifs/database.png";
+
+  let logos = [
+    Html,
+    Css,
+    Bootstrap,
+    Tailwind,
+    Javascript,
+    React,
+    Nextjs,
+    Svelte,
+    Redux,
+    Nodejs,
+    Express,
+    Mongodb,
+    Sql,
+  ];
 </script>
 
 <main class="main">
-  <section class="navbar">
-    <a class="logo" href={``}>D.E</a>
-    <ul class="nav">
-      {#each navLinks as link (link)}
-        <li class="nav-item">
-          <a href={`#${link}`} class="nav-link">{link}</a>
-        </li>
-      {/each}
-    </ul>
-    <ul class="nav navbar-social-links">
-      <li class="nav-item">
-        <a href={`#`} class="nav-link"
-          ><i class="fa-brands fa-linkedin-in"></i></a
-        >
-      </li>
-      <li class="nav-item">
-        <a href={`#`} class="nav-link"><i class="fa-brands fa-upwork"></i></a>
-      </li>
-    </ul>
-  </section>
+  <Navbar />
   <section class="header">
     <ul class="header-social-links">
       <li class="social-item">
@@ -60,111 +75,60 @@
     <div class="header-img-container">
       <img src={Logo} alt="computer guy" class="header-img-logo" />
     </div>
-    <!-- <ul class="header-social-links">
-      <li class="social-item">
-        <a href={`#`} class="social-link"><i class="fa-brands fa-github"></i></a
-        >
-      </li>
-      <li class="social-item">
-        <a href={`#`} class="social-link"
-          ><i class="fa-brands fa-telegram blue"></i></a
-        >
-      </li>
-      <li class="social-item">
-        <a href={`#`} class="social-link"
-          ><i class="fa-regular fa-envelope red"></i></a
-        >
-      </li>
-    </ul> -->
+  </section>
+  <section class="about">
+    <h1 class="about-header t-center">About Me</h1>
+
+    <p class="about-content">
+      I am an experienced Full-stack Developer with a proven track record in
+      developing high-quality websites and web applications. My expertise lies
+      in developing attractive , dynamic and functional website using the latest
+      web frameworks and libraries.
+    </p>
+    <p class="about-content">
+      My projects involve seamless API integration for enhanced functionalities,
+      pixel perfect design conversion, clean and optimize written codes.I adhere
+      to Agile methodologies, ensuring an adaptive, flexible, and
+      result-oriented approach in every project I undertake.
+    </p>
+  </section>
+  <section class="skills">
+    <h2 class="header-small t-center">Skills</h2>
+    <div class="skills-logo-container">
+      {#each logos as logo, index (index)}
+        <img src={logo} alt="logo" class="skills-img" />
+      {/each}
+    </div>
+  </section>
+  <section class="services">
+    <h2 class="header-small t-center">Services I Offer</h2>
+    <div class="services-card-container">
+      <div class="services-card">
+        <img src={Frontend} alt="frontend gif" />
+        <h3 class="card-title">Frontend Development</h3>
+        <p class="card-content">
+          Build Responsive, Attractive, Dynamic and interactive Websites.
+          Transform designs into functional and accessible interfaces.
+        </p>
+      </div>
+      <div class="services-card">
+        <img src={Backend} alt="frontend gif" />
+        <h3 class="card-title">Backend Development</h3>
+        <p class="card-content">
+          Build server-side logic of a web applications. create, maintain, and
+          optimize servers and databases that power the user-facing side of a
+          website. Design and implement APIs
+        </p>
+      </div>
+      <div class="services-card">
+        <img src={Database} alt="frontend gif" />
+        <h3 class="card-title">Database Management</h3>
+        <p class="card-content">
+          Design, implement, maintain, and repair an organization’s database.
+          Create a performance, integrited , and well secured database. Store
+          and organize data effectively
+        </p>
+      </div>
+    </div>
   </section>
 </main>
-
-<style>
-  .main {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-  }
-  .blue {
-    color: #387adf;
-  }
-  .green {
-    color: #65b741;
-  }
-  .red {
-    color: #ff004d;
-  }
-  .navbar {
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  .nav {
-    display: flex;
-    list-style-type: none;
-    gap: 3rem;
-  }
-  .nav-link {
-    font-weight: 600;
-  }
-  .navbar-social-links .nav-link {
-    font-size: 1.2rem;
-  }
-  .logo {
-    font-size: 1.7rem;
-    font-weight: 700;
-  }
-  .fa-upwork {
-    color: #65b741 !important;
-  }
-  .fa-linkedin-in {
-    color: #387adf !important;
-  }
-  .header {
-    padding: 4rem 2rem;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .header-content-header {
-    display: block;
-    font-size: 3rem;
-  }
-  .header-content-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .header-content {
-    display: block;
-    margin: 0.5rem 0;
-  }
-  .header-btn {
-    border: 2px solid #ffff;
-    padding: 0.7rem;
-    background: inherit;
-    color: #ffff;
-
-    max-width: 150px;
-    cursor: pointer;
-  }
-
-  .header-social-links {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .social-link {
-    font-size: 1.2rem;
-  }
-  .header-img-logo {
-    border-radius: 50%;
-
-    max-width: 300px;
-    height: 300px;
-  }
-</style>
